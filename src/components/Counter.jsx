@@ -32,16 +32,16 @@ class Counter extends Component {
 }
 
 
-// let mapStateToProps=(state)=>{// store.getState()
-//     return {
-//         number:state.counter.number
-//     }
-// }
-// let mapDispatchToProps=(dispatch)=>{//store.dispatch
-//     return {
-//         add:(n)=>{dispatch(actions.add(n))}
-//     }
-// }
+let mapStateToProps=(state)=>{// store.getState()
+    return {
+        number:state.counter.number
+    }
+}
+let mapDispatchToProps=(dispatch)=>{//store.dispatch
+    return {
+        add:(n)=>{dispatch(actions.add(n))}
+    }
+}
 
 let bindActionCreators = (actions, dispatch) => {
     let obj = {}
@@ -52,7 +52,6 @@ let bindActionCreators = (actions, dispatch) => {
 }
 
 // export default connect(mapStateToProps,mapDispatchToProps)(Counter);
-
 
 // 如果connect 第一次执行的函数 ，如果第二个参数是对象类型 会自动内部调用bindActionCreator来实现
 export default connect((state) => ({ ...state.counter }), actions)(Counter)

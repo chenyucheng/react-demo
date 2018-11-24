@@ -2,7 +2,6 @@ import {combineReducers} from 'redux'
 import counter from './counter'
 import todo from './todo'
 
-
 // {counter:{number:0},todo:[]}
 
 // 传进一个 reducers  
